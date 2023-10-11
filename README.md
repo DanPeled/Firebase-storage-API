@@ -101,7 +101,14 @@ Firebase is configured with the following settings:
 - It determines the appropriate folder for the file based on its extension.
 - The file is read as an ArrayBuffer and then uploaded to the specified folder in Firebase Storage.
 - The status and progress of the upload are displayed to the user.
-
+  Example of resulted file stracture:
+  ```
+  L User ID
+  	L Images
+  		L Dog.png
+  	L Text
+  		L goober.txt
+  ```
 ## Event Listeners
 
 - The code sets up event listeners for file uploads, logout, and form submissions.
