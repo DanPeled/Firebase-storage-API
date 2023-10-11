@@ -60,6 +60,11 @@ Clicking on an image or file link will open the file in a new tab or window.
 
 Users can also log out using the "Logout" button.
 
+# Ideas to add:
+- Password restore (e.g by a mail sent to the user).
+- A better visual representation of the user files.
+- A QR generation for the files to be able to share with other users.
+- Other sharing methods.
 # Contributing
 Feel free to contribute to this project by creating pull requests or opening issues. If you encounter any problems or have ideas for improvements, let me know!
 
