@@ -171,19 +171,6 @@ function uploadFile(file, originalFilename) {
 				console.log('Uploaded');
 				document.getElementById('status').textContent = 'Status: Upload successful';
 
-				getDownloadURL(fileRef)
-					.then((downloadURL) => {
-						const qrCode = new QRCode(document.getElementById("qrcode"), {
-							text: downloadURL,
-							width: 400,
-							height: 400
-						});
-						console.log(downloadURL);
-					})
-					.catch((error) => {
-						console.error("Error getting download URL:", error);
-					});
-
 				const progressBar = document.getElementById('progress');
 				progressBar.value = 100;
 			})
