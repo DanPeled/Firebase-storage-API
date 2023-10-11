@@ -24,6 +24,17 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebas
 import { getStorage } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-storage.js";
 import { getAuth, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
 
+const firebaseConfig = {
+	apiKey: "YOUR_API_KEY",
+	authDomain: "YOUR_AUTH_DOMAIN",
+	projectId: "YOUR_PROJECT_ID",
+	storageBucket: "YOUR_STORAGE_BUCKET",
+	messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+	appId: "YOUR_APP_ID",
+	measurementId: "YOUR_MEASUREMENT_ID"
+};
+
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const storage = getStorage(app);
@@ -59,9 +70,4 @@ vbnet
 Copy code
 
 Please note that you'll need to adjust the paths, folder structure, and Firebase configuration to fit your project.
-Save to grepper
 
-
-
-
-`
