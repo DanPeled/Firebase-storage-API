@@ -68,7 +68,49 @@ Users can also log out using the "Logout" button.
 # Contributing
 Feel free to contribute to this project by creating pull requests or opening issues. If you encounter any problems or have ideas for improvements, let me know!
 
-License
+# Documentation
+## Firebase Configuration
+
+Firebase is configured with the following settings:
+
+- `apiKey`: Your Firebase project's API key.
+- `authDomain`: The authentication domain for your Firebase project.
+- `projectId`: Your Firebase project's ID.
+- `storageBucket`: The storage bucket for Firebase Storage.
+- `messagingSenderId`: The ID of your project's messaging sender.
+- `appId`: Your Firebase project's application ID.
+- `measurementId`: The measurement ID for analytics (optional).
+
+## Authentication
+
+- The code initializes Firebase with the provided configuration.
+- It sets up authentication by creating an `auth` object.
+- The `onAuthStateChanged` listener tracks the user's authentication state.
+- When a user is authenticated, it hides the login and registration forms and displays the upload section and logout button.
+
+## File Upload and Display
+
+- The code defines a function `fetchAndDisplayUserFiles()` to fetch and display user-uploaded files.
+- It lists all files in the user's storage and displays images as images and other files as clickable links.
+- It also provides the ability to view or download these files.
+- The file list is displayed in an HTML element with the id `fileList`.
+
+## File Upload Function
+
+- The `uploadFile()` function handles file uploads to Firebase Storage.
+- It determines the appropriate folder for the file based on its extension.
+- The file is read as an ArrayBuffer and then uploaded to the specified folder in Firebase Storage.
+- The status and progress of the upload are displayed to the user.
+
+## Event Listeners
+
+- The code sets up event listeners for file uploads, logout, and form submissions.
+- The `uploadBtn` listener uploads a selected file to Firebase Storage.
+- The `logoutButton` listener signs the user out when clicked.
+- The registration and login forms handle user registration and login.
+- The "Forgot Password" button (with the id `forgotPasswordBtn`) could handle password recovery, but it's currently commented out.
+
+# License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 Please note that you'll need to adjust the paths, folder structure, and Firebase configuration to fit your project.
